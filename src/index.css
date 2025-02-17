@@ -605,7 +605,8 @@ body {
   }
 
   .subcategory-banner {
-    height: 150px; /* Adjust banner height on small screens */
+    height: 180px;
+    margin-top: 25px; /* Adjust banner height on small screens */
   }
 
   .subcategory-banner h2 {

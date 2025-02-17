@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa'; // Add icons for social links
+import { Link } from 'react-router-dom'; // Using Link for navigation
 
 const Footer = () => {
   return (
@@ -12,11 +13,31 @@ const Footer = () => {
         <div className="footer-links">
           <h4>Quick links</h4>
           <ul>
-            <li><a href="/">Home</a></li> {/* Corrected link */}
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/subcategory/Equipments">Categories</a></li>
-            <li><a href="/contact">Contact</a></li>
-            {/* <li><a href="/privacy-policy">Privacy Policy</a></li> */}
+            <li>
+              <Link to="/" className="footer-link">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className="footer-link">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link to="/subcategory/Equipments" className="footer-link">
+                Categories
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="footer-link">
+                Contact
+              </Link>
+            </li>
+            {/* <li>
+              <Link to="/privacy-policy" className="footer-link">
+                Privacy Policy
+              </Link>
+            </li> */}
           </ul>
         </div>
 

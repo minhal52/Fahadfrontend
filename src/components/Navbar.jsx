@@ -1,133 +1,62 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { FaBars, FaTimes, FaChevronDown } from "react-icons/fa"; // FontAwesome icons
+import { Link } from "react-router-dom";
+import { FaBars, FaTimes, FaChevronDown } from "react-icons/fa"; // Icons
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false); // State for dropdown
-  const location = useLocation(); // Get current location
+  const [isMobile, setIsMobile] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
 
-  // Handle dropdown toggle
-  const toggleDropdown = (e) => {
-    e.stopPropagation(); // Prevent closing the dropdown when clicking inside
-    setDropdownOpen(!dropdownOpen);
+  const closeMobileMenu = () => {
+    setIsMobile(false);
+    setDropdown(false);
   };
-
-  // Close the dropdown if clicked anywhere outside
-  const closeDropdown = () => {
-    setDropdownOpen(false);
-  };
-
-  // Function to check if the current page matches the link
-  const isActive = (path) => location.pathname === path;
 
   return (
     <nav className="navbar">
       {/* Logo */}
-      <div className="logo">
-        <Link to="/">
-          <img src="/Fahad_EngineeringLogo-.png" alt="Company Logo" />
-        </Link>
-      </div>
+      <Link to="/" className="logo" onClick={closeMobileMenu}>
+        <img src="/Fahad_EngineeringLogo-.png" alt="Fahhad Construction" />
+      </Link>
 
       {/* Navigation Links */}
-      <ul className={`nav-links ${menuOpen ? "open" : ""}`} onClick={closeDropdown}>
-        <li>
-          <Link
-            to="/"
-            onClick={() => setMenuOpen(false)}
-            className={isActive("/") ? "active" : ""}
-          >
-            Home
-          </Link>
-        </li>
+      <ul className={isMobile ? "nav-links nav-active" : "nav-links"}>
+        <li><Link to="/" onClick={closeMobileMenu}>Home</Link></li>
+        <li><Link to="/about" onClick={closeMobileMenu}>About</Link></li>
 
-        {/* Services Dropdown */}
-        <li className={`dropdown ${dropdownOpen ? "open" : ""}`} onClick={toggleDropdown}>
-          <Link to="#">
-            Services <FaChevronDown className={`dropdown-icon ${dropdownOpen ? "open" : ""}`} />
-          </Link>
-          <ul className="dropdown-menu">
-            <li>
-              <Link 
-                to="/services#machinery" 
-                onClick={() => setMenuOpen(false)} 
-                className={isActive("/services#machinery") ? "active" : ""}
-              >
-                Machinery
-              </Link>
-            </li>
-            {/* <li>
-              <Link 
-                to="/services#material-supply" 
-                onClick={() => setMenuOpen(false)} 
-                className={isActive("/services#material-supply") ? "active" : ""}
-              >
-                Material Supply
-              </Link>
-            </li> */}
-            <li>
-              <Link 
-                to="/services#manpower-supply" 
-                onClick={() => setMenuOpen(false)} 
-                className={isActive("/services#manpower-supply") ? "active" : ""}
-              >
-                Manpower Supply
-              </Link>
-            </li>
-            <li>
-              <Link 
-                to="/services#instrumentation" 
-                onClick={() => setMenuOpen(false)} 
-                className={isActive("/services#instrumentation") ? "active" : ""}
-              >
-                Instrumentation
-              </Link>
-            </li>
-            <li>
-              <Link 
-                to="/subcategory/Equipments" 
-                onClick={() => setMenuOpen(false)} 
-                className={isActive("/subcategory/Equipments") ? "active" : ""}
-              >
-                Equipment Rentals
-              </Link>
-            </li>
-            <li>
-              <Link 
-                to="/subcategory/Transportation" 
-                onClick={() => setMenuOpen(false)} 
-                className={isActive("/subcategory/Transportation") ? "active" : ""}
-              >
-                Vehicle Rentals
-              </Link>
-            </li>
+        {/* Dropdown with Clickable "Services" Link */}
+        <li className="dropdown">
+          <div className="dropbtn">
+            <Link 
+              to="/services" 
+              className="dropdown-link" 
+              onClick={() => closeMobileMenu()} // ✅ Clicking Services redirects to /services
+            >
+              Services
+            </Link>
+            <FaChevronDown 
+              className={`dropdown-arrow ${dropdown ? "rotate" : ""}`} 
+              onClick={(e) => {
+                e.stopPropagation(); // Prevent immediate parent click
+                setDropdown(!dropdown);
+              }} 
+            />
+          </div>
+          <ul className={dropdown ? "dropdown-content show" : "dropdown-content"}>
+            <li><Link to="/services/equipment-rental" onClick={closeMobileMenu}>Equipment Rental</Link></li>
+            <li><Link to="/services/transportation" onClick={closeMobileMenu}>Transportation</Link></li>
+            <li><Link to="/services/material-supply" onClick={closeMobileMenu}>Material Supply</Link></li>
+            <li><Link to="/services/machinery-supply" onClick={closeMobileMenu}>Machinary Supply</Link></li>
+            <li><Link to="/services/instrumentation" onClick={closeMobileMenu}>Instrumentation</Link></li>
           </ul>
         </li>
 
-        <li>
-          <Link
-            to="/about"
-            onClick={() => setMenuOpen(false)}
-            className={isActive("/about") ? "active" : ""}
-          >
-            About
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/contact"
-            onClick={() => setMenuOpen(false)}
-            className={isActive("/contact") ? "active" : ""}
-          >
-            Contact
-          </Link>
-        </li>
+        {/* <li><Link to="/clients" onClick={closeMobileMenu}>Clients</Link></li> */}
+        <li><Link to="/contact" onClick={closeMobileMenu}>Contact</Link></li>
       </ul>
 
-      {/* Menu Toggle Button */}
-      <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
-        {menuOpen ? <FaTimes /> : <FaBars />}
+      {/* Mobile Toggle Button */}
+      <div className="hamburger" onClick={() => setIsMobile(!isMobile)}>
+        {isMobile ? <FaTimes /> : <FaBars />}
       </div>
     </nav>
   );

@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const EquipmentRentals = () => {
-  const navigate = useNavigate(); // React Router navigation hook
+  const navigate = useNavigate();
 
   const equipmentList = [
     {

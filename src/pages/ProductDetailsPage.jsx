@@ -80,10 +80,7 @@ const ProductDetailsPage = () => {
           <FaWhatsapp className="whatsapp-icon" /> WhatsApp Inquiry
         </a>
 
-        {/* Fallback: Copy to Clipboard Button */}
-        {/* <button onClick={copyToClipboard} className="copy-message-button">
-          Copy Message
-        </button> */}
+  
       </div>
     </div>
   );

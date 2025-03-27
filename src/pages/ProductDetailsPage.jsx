@@ -24,9 +24,9 @@ const ProductDetailsPage = () => {
   };
 
   // Generate WhatsApp Message
-  const whatsappMessage = `Hello, I'm interested in the ${product.name}.%0A` +
-                          `Brand: ${product.brand}%0A` +
-                          `Model Year: ${product.year}%0A` +
+  const whatsappMessage = `Hello, I'm interested in the ${product.name}.` +
+                          `Brand: ${product.brand}` +
+                          `Model Year: ${product.year}` +
                           `Quantity: ${quantity}`;
 
   // WhatsApp Link (Mobile & Desktop Compatible)

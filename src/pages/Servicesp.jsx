@@ -3,13 +3,13 @@ import { useNavigate } from "react-router-dom";
 const servicesData = [
   {
     id: 1,
-    image: "/equipmentrental.jpg",
+    image: "/jcb.jpg",
     name: "Equipment Rentals",
     route: "/equipment-rental",
   },
   {
     id: 2,
-    image: "/transportation.jpg",
+    image: "/ashokleylandbus1.jpg",
     name: "Transportation",
     route: "/transportation",
   },

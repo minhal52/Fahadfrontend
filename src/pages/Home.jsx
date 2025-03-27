@@ -82,14 +82,14 @@ const CounterSection = () => {
 const servicesData = [
   {
     id: 1,
-    image: "/equipmentrental.jpg",
+    image: "/jcb.jpg",
     name: "Equipment Rentals",
     description: "A brief description of Equipment Rentals.",
     route: "/services/equipment-rental",
   },
   {
     id: 2,
-    image: "/transportation.jpg",
+    image: "/ashokleylandbus1.jpg",
     name: "Transportation",
     description: "A brief description of Transportation.",
     route: "/services/transportation",
@@ -225,44 +225,102 @@ const OurClients = () => {
 };
 
 
-
-const ContactSection  = () => {
+const ContactSection = () => {
   return (
- <div className="contact-container">
-        {/* Left Section */}
-        <div className="contact-left">
-          <h2>Feel free to get in touch with us</h2>
-          <p>
-            Innovate with us and let's grow in a technology-driven world. Contact
-            us today to know more.
-          </p>
-          <div className="social-icons">
-            <a href="#" className="social-link"><i className="fa-brands fa-linkedin"></i></a>
-            {/* <a href="#" className="social-link"><i className="fa-brands fa-google"></i></a> */}
-            <a href="#" className="social-link"><i className="fa-brands fa-facebook"></i></a>
-            <a href="#" className="social-link"><i className="fa-brands fa-instagram"></i></a>
-            <a href="#" className="social-link"><i className="fa-brands fa-youtube"></i></a>
-          </div>
-        </div>
-
-        {/* Right Section - Contact Form */}
-        <div className="contact-form">
-          <form>
-            <div className="form-row">
-              <input type="text" placeholder="Full Name" className="form-input" />
-              <input type="email" placeholder="Email Address" className="form-input" />
-            </div>
-            <div className="form-row">
-              <input type="text" placeholder="Phone Number" className="form-input" />
-              <input type="text" placeholder="Subject" className="form-input" />
-            </div>
-            <textarea placeholder="Drop Your Message" className="form-textarea"></textarea>
-            <button className="submit-btn">SUBMIT</button>
-          </form>
+    <div className="contact-container">
+      {/* Left Section */}
+      <div className="contact-left">
+        <h2>Feel free to get in touch with us</h2>
+        <p>
+          Innovate with us and let's grow in a technology-driven world. Contact
+          us today to know more.
+        </p>
+        <div className="social-icons">
+          <a
+            href="https://www.linkedin.com/company/fahad-eng/"
+            className="social-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fa-brands fa-linkedin"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/fahadengineering/"
+            className="social-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fa-brands fa-instagram"></i>
+          </a>
+          <a
+            href="https://wa.me/966562449061"
+            className="social-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="mailto:info@fahadeng.com" className="social-link">
+            <i className="fa-solid fa-envelope"></i>
+          </a>
         </div>
       </div>
+
+      {/* Right Section - Contact Form */}
+      <div className="contact-form">
+        <form
+          action="mailto:info@fahadeng.com"
+          method="post"
+          encType="text/plain"
+        >
+          <div className="form-row">
+            <input
+              type="text"
+              name="name"
+              placeholder="Full Name"
+              className="form-input"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              className="form-input"
+              required
+            />
+          </div>
+          <div className="form-row">
+            <input
+              type="text"
+              name="phone"
+              placeholder="Phone Number"
+              className="form-input"
+              required
+            />
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              className="form-input"
+              required
+            />
+          </div>
+          <textarea
+            name="message"
+            placeholder="Drop Your Message"
+            className="form-textarea"
+            required
+          ></textarea>
+          <button type="submit" className="submit-btn">
+            SUBMIT
+          </button>
+        </form>
+      </div>
+    </div>
   );
 };
+
+
 
 export default function HomePage() {
   return (

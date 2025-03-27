@@ -33,21 +33,21 @@ const Footer = () => {
 
         {/* Social Media Links */}
         <div className="footer-socials">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-            <FaFacebookF />
-          </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-            <FaTwitter />
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-            <FaLinkedinIn />
-          </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-            <FaInstagram />
-          </a>
-        </div>
-      </div>
-
+  <h3>Follow Us On</h3> 
+  <a href="https://www.linkedin.com/company/fahad-eng/" className="social-link" target="_blank" rel="noopener noreferrer">
+    <i className="fa-brands fa-linkedin"></i>
+  </a>
+  <a href="https://www.instagram.com/fahadengineering/" className="social-link" target="_blank" rel="noopener noreferrer">
+    <i className="fa-brands fa-instagram"></i>
+  </a>
+  <a href="https://wa.me/966562449061" className="social-link" target="_blank" rel="noopener noreferrer">
+    <i className="fa-brands fa-whatsapp"></i>
+  </a>
+  <a href="mailto:info@fahadeng.com" className="social-link">
+    <i className="fa-solid fa-envelope"></i>
+  </a>
+</div>
+</div>
       {/* Footer Bottom */}
       <div className="footer-bottom">
         <p>&copy; 2025 Fahad Engineering. All Rights Reserved.</p>

@@ -11,7 +11,7 @@ const EquipmentRentals = () => {
       brand: "Caterpillar",
       year: "2022",
       image: "/jcb.jpg",
-      images: ["/jcb1.jpg", "/jcb2.jpg", "/jcb3.jpg"], // Extra images for thumbnails
+      images: ["/jcbn1-removebg-preview.png", "/jcbn2-preview.png", "/jcbn3-removebg-preview.png"], // Extra images for thumbnails
       models: ["JCB 3DX", "JCB 4CX", "JCB 5DX"]
     },
     {
@@ -19,8 +19,8 @@ const EquipmentRentals = () => {
       name: "WHEEL LOADER",
       brand: "Lonking",
       year: "2023,2024",
-      image: "/lonkingwheelloader.jpg",
-      images: ["/lonking1.jpg", "/lonking2.jpg", "/lonking3.jpg"],
+      image: "/Screenshot_2025-03-27_092236-removebg-preview.png",
+      images: ["/Screenshot_2025-03-27_092003-removebg-preview.png", "/lonkingwheelloader.jpg", "/Screenshot_2025-03-27_092257-removebg-preview.png"],
       models: ["Lonking LG855", "Lonking LG833", "Lonking CDM"]
     },
     {
@@ -29,7 +29,7 @@ const EquipmentRentals = () => {
       brand: "Cat",
       year: "2022,2023,2024",
       image: "/skidloader.jpg",
-      images: ["/skid1.jpg", "/skid2.jpg", "/skid3.jpg"],
+      images: ["/skidloadern3-removebg-preview.png", "/skidloadern1-removebg-preview.png"],
       models: ["Cat 226D", "Cat 232D", "Cat 262D"]
     },
     {
@@ -37,8 +37,8 @@ const EquipmentRentals = () => {
       name: "BACKHOE LOADER",
       brand: "Bull",
       year: "2023,2024",
-      image: "/backhoeloader.jpg",
-      images: ["/backhoe1.jpg", "/backhoe2.jpg", "/backhoe3.jpg"],
+      image: "/backhoeloadern5-removebg-preview.png",
+      images: ["/backhoeloadern1-removebg-preview.png", "/backhoeloadern2-removebg-preview.png", "/backhoeloadern3-removebg-preview.png"],
       models: ["Bull HD76", "Bull Smart60", "Bull HD100"]
     },
     {
@@ -47,7 +47,7 @@ const EquipmentRentals = () => {
       brand: "Lonking",
       year: "2024",
       image: "/rollercompactor.jpg",
-      images: ["/roller1.jpg", "/roller2.jpg", "/roller3.jpg"],
+      images: ["/rollern1-removebg-preview.png", "/rollern2-removebg-preview.png", "/rollern3-removebg-preview.png"],
       models: ["Lonking RC100", "Lonking RC200"]
     },
     {
@@ -56,19 +56,18 @@ const EquipmentRentals = () => {
       brand: "Heli",
       year: "2024",
       image: "/7tonforkliftheli.jpg",
-      images: ["/forklift1.jpg", "/forklift2.jpg", "/forklift3.jpg"],
+      images: ["/7tonn1-removebg-preview.png", "/7tonn2-removebg-preview.png", "/7tonn3-removebg-preview.png"],
       models: ["Heli CPCD70", "Heli CPCD80"]
     }
   ];
 
+ 
   return (
     <section className="equipment-rentals">
-      {/* Banner Section */}
       <div className="equipment-banner">
         <h1 className="equipment-banner-heading">Equipment Rentals</h1>
       </div>
 
-      {/* Equipment List Section */}
       <div className="equipment-list">
         {equipmentList.map((item) => (
           <div key={item.id} className="equipment-card">
@@ -77,12 +76,9 @@ const EquipmentRentals = () => {
             <p className="equipment-brand">Brand: {item.brand}</p>
             <p className="equipment-year">Year: {item.year}</p>
             
-            {/* View Details Button - Redirects to Product Details Page */}
             <button
               className="view-models-button"
-              onClick={() =>
-                navigate(`/product-details/${item.id}`, { state: { product: item } })
-              }
+              onClick={() => navigate(`/product-details/${item.id}`, { state: { product: item } })}
             >
               View Details
             </button>

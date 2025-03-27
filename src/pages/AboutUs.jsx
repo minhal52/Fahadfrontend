@@ -49,7 +49,7 @@ const AboutUs = () => {
       </div>
 
       {/* Meet the Founder Section */}
-      <div className="founder-section">
+      {/* <div className="founder-section">
         <h2 className="founder-heading">Meet the Founder</h2>
         <div className="founder-content">
           <div className="founder-image">
@@ -64,7 +64,7 @@ const AboutUs = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Mission & Vision Section */}
       <div className="mission-vision-section">

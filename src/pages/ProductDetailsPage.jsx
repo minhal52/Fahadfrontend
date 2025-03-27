@@ -12,36 +12,31 @@ const ProductDetailsPage = () => {
     return <h2>Product Not Found</h2>;
   }
 
-  // Store multiple images: main image + extra images
-  const images = [
-    product.image,
-    ...(product.models || []).map(
-      (model, index) =>
-        `/images/${product.name.toLowerCase().replace(/ /g, "-")}-${index + 1}.jpg`
-    ),
-  ];
+  // Use provided product images (main + thumbnails)
+  const images = [product.image, ...(product.images || [])];
 
   const [mainImage, setMainImage] = useState(images[0]); // Default main image
   const [quantity, setQuantity] = useState(1); // Default quantity 1
 
   // Function to handle quantity change
   const handleQuantityChange = (type) => {
-    if (type === "increase") {
-      setQuantity((prev) => prev + 1);
-    } else if (type === "decrease" && quantity > 1) {
-      setQuantity((prev) => prev - 1);
-    }
+    setQuantity((prev) => (type === "increase" ? prev + 1 : Math.max(1, prev - 1)));
   };
 
-  // WhatsApp message with product details
-  const whatsappMessage = `Hello, I'm interested in the ${product.name}. 
-Brand: ${product.brand}
-Model Year: ${product.year}
-Quantity: ${quantity}`;
+  // Generate WhatsApp Message
+  const whatsappMessage = `Hello, I'm interested in the ${product.name}.%0A` +
+                          `Brand: ${product.brand}%0A` +
+                          `Model Year: ${product.year}%0A` +
+                          `Quantity: ${quantity}`;
 
-  const whatsappLink = `https://wa.me/yourwhatsappnumber?text=${encodeURIComponent(
-    whatsappMessage
-  )}`;
+  // WhatsApp Link (Mobile & Desktop Compatible)
+  const whatsappLink = `https://api.whatsapp.com/send?phone=%2B966562449061&text=${encodeURIComponent(whatsappMessage)}`;
+
+  // Fallback: Copy to Clipboard
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(decodeURIComponent(whatsappMessage));
+    alert("Message copied to clipboard! Open WhatsApp and paste the message.");
+  };
 
   return (
     <div className="product-details">
@@ -59,7 +54,7 @@ Quantity: ${quantity}`;
               key={index}
               src={image}
               alt={`Thumbnail ${index + 1}`}
-              className="thumbnail"
+              className={`thumbnail ${mainImage === image ? "active" : ""}`}
               onClick={() => setMainImage(image)}
             />
           ))}
@@ -72,22 +67,7 @@ Quantity: ${quantity}`;
         <p><strong>Brand:</strong> {product.brand}</p>
         <p><strong>Model Year:</strong> {product.year}</p>
 
-        {/* Check if the product is Transportation or Equipment */}
-        {product.type === "Transportation" && (
-          <div className="product-type">
-            <p><strong>Type:</strong> Transportation</p>
-            {/* Add any specific details for transportation */}
-          </div>
-        )}
-
-        {product.type === "Equipment" && (
-          <div className="product-type">
-            <p><strong>Type:</strong> Equipment</p>
-            {/* Add any specific details for equipment */}
-          </div>
-        )}
-
-        {/* Quantity Selector with Increase/Decrease Buttons */}
+        {/* Quantity Selector */}
         <div className="quantity-container">
           <label>Quantity:</label>
           <button onClick={() => handleQuantityChange("decrease")} className="quantity-btn">-</button>
@@ -99,6 +79,11 @@ Quantity: ${quantity}`;
         <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="whatsapp-button">
           <FaWhatsapp className="whatsapp-icon" /> WhatsApp Inquiry
         </a>
+
+        {/* Fallback: Copy to Clipboard Button */}
+        {/* <button onClick={copyToClipboard} className="copy-message-button">
+          Copy Message
+        </button> */}
       </div>
     </div>
   );

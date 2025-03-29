@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer-content">
         {/* Logo */}
         <div className="footer-logo">
-          <img src="/Fahad_EngineeringLogo-.png" alt="Fahad Engineering" />
+          <img src="/logo-removebg-preview.png" alt="Fahad Engineering" />
         </div>
 
         {/* Navigation Links (Same as Navbar) */}

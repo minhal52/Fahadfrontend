@@ -24,14 +24,13 @@ h1,h2{
 h3{
   font-family: 'Montserrat', sans-serif;
 }
-
 /* Navbar Container */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #fff;
-  padding: 15px 30px;
+  padding: 10px 20px; /* Reduced padding for a sleek design */
   position: fixed;
   width: 100%;
   top: 0;
@@ -39,22 +38,24 @@ h3{
   z-index: 1000;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   font-family: 'Montserrat', sans-serif;
+  
 }
 
 /* Logo */
 .logo img {
-  width: 150px;
-  margin-top: -20px;
+  width: 200px; /* Increased size */
+  height: auto;
+  margin-top: -15px;
 }
 
 /* Navigation Links */
 .nav-links {
   list-style: none;
   display: flex;
-  justify-content: center; /* Center links */
+  justify-content: center;
   align-items: center;
   flex: 1;
-  gap: 40px;
+  gap: 30px;
   padding: 0;
 }
 
@@ -62,31 +63,28 @@ h3{
   position: relative;
 }
 
-/* Links Styling */
 .nav-links a,
 .dropbtn {
   text-decoration: none;
   color: #2e2d79;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight:500;
   padding: 8px 12px;
   transition: 0.3s;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
-/* Hover Effect */
 .nav-links a:hover,
 .dropbtn:hover {
-  color:#ff9800;
+  color: #ff9800;
 }
 
-/* Dropdown Container */
+/* Dropdown */
 .dropdown {
   position: relative;
 }
 
-/* Dropdown Button (With Arrow) */
 .dropbtn {
   display: flex;
   align-items: center;
@@ -94,13 +92,10 @@ h3{
   cursor: pointer;
 }
 
-/* Dropdown Arrow */
 .dropdown-arrow {
   transition: transform 0.3s ease;
-  cursor: pointer;
 }
 
-/* Rotate Arrow when Dropdown is Open */
 .dropdown-arrow.rotate {
   transform: rotate(180deg);
 }
@@ -121,7 +116,6 @@ h3{
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Show dropdown */
 .dropdown:hover .dropdown-content,
 .dropdown-content.show {
   display: block;
@@ -129,7 +123,6 @@ h3{
   transform: translateY(0);
 }
 
-/* Dropdown Items */
 .dropdown-content li {
   padding: 8px 12px;
   text-align: center;
@@ -148,47 +141,39 @@ h3{
 .hamburger {
   display: none;
   font-size: 22px;
-  color: #333;
+  color:#2e2d79;
   cursor: pointer;
+  margin-right: 50px;
 }
 
 /* ✅ RESPONSIVE DESIGN */
 @media (max-width: 1024px) {
-  .nav-links {
-    gap: 20px;
-  }
-  
   .logo img {
-    width: 140px;
-  }
-
-  .hamburger {
-    margin-right: 45px; /* Adds spacing on the right side */
+    width: 170px; /* Increase size for tablets */
   }
 }
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 15px 20px;
+    padding: 10px 15px;
   }
 
   .logo img {
-    width: 130px;
-    margin-top: -10px;
+    width: 170px; /* Increase size for mobile */
+    margin-top: -20px;
   }
 
-  /* Mobile Menu Styles */
   .nav-links {
     display: none;
     flex-direction: column;
-    align-items: center; /* Ensures proper alignment */
+    align-items: center;
     background: white;
     position: absolute;
     top: 70px;
     left: 0;
     width: 100%;
     text-align: center;
-    padding: 20px 0;
+    padding: 15px 0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
 
@@ -196,59 +181,31 @@ h3{
     display: flex;
   }
 
-  .nav-links li {
-    padding: 12px 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  /* Dropdown Inside Mobile Menu */
-  .dropdown {
-    width: 100%;
-  }
-
   .dropdown-content {
     position: relative;
-    top: 0;
-    left: 0;
+    width: 100%;
     background: none;
     box-shadow: none;
-    display: none;
-    opacity: 1;
-    transform: none;
     padding-left: 0;
-    width: 100%;
   }
 
   .dropdown-content.show {
     display: block;
   }
 
-  /* Adjust Dropdown Button */
   .dropbtn {
     justify-content: center;
     width: 100%;
   }
 
-  /* Ensure Dropdown Icon Aligns Properly */
-  .dropbtn .dropdown-arrow {
-    margin-left: 8px;
-  }
-
-  /* Show hamburger icon */
   .hamburger {
     display: block;
-    margin-right: 55px; /* Ensures spacing remains on mobile */
   }
 }
 
 @media (min-width: 1025px) {
-  .navbar {
-    padding: 0px 20px; /* Reduce padding to decrease height */
-  }
-
   .logo img {
-    width: 140px;
+    width: 190px; /* Increased size for large screens */
   }
 }
 
@@ -373,7 +330,8 @@ h3{
 .counter-section {
   padding: 50px 20px;
   text-align: center;
-  /* background: #f8ad47; */
+  background: linear-gradient(to right, #000428, #004e92);
+
   font-family: 'Montserrat', sans-serif; /* Apply font to the entire section */
 }
 
@@ -382,12 +340,14 @@ h3{
   justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
+  
 }
 
 .counter-box {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
   width: 220px;
   transition: transform 0.3s;
 }
@@ -404,7 +364,7 @@ h3{
 
 .counter-box p {
   font-size: 16px;
-  color: #000000; /* Change text color to black */
+  color:#2e2d79; /* Change text color to black */
   font-family: 'Montserrat', sans-serif; /* Ensure font applies */
 }
 
@@ -637,6 +597,7 @@ h3{
 .about-section {
   padding: 50px 20px;
   background-color: #f9f9f9; /* Optional background color */
+ 
 }
 
 .about-container {
@@ -644,12 +605,20 @@ h3{
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  background-image: url('/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.5); /* Adjust the opacity (0.5 = 50% transparent) */
+  background-blend-mode: overlay; /* Blends the background color with the image */
 }
+
 
 .about-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  
   max-width: 400px; /* Adjust the width to your preference */
   aspect-ratio: 1.5; /* Makes the image a rectangle */
   border-radius: 8px; /* Optional: for rounded corners */
@@ -659,6 +628,7 @@ h3{
   flex: 1;
   padding: 20px;
   max-width: 500px;
+  
 }
 
 .about-content h2 {
@@ -670,7 +640,7 @@ h3{
 .about-content p {
   font-size: 16px; /* Updated font size */
   font-weight: 500; /* Updated font weight */
-  color: #787c8b; /* Updated paragraph text color */
+  color:#2e2d79; /* Updated paragraph text color */
   font-family: 'Montserrat', sans-serif; /* Updated font family */
   line-height: 1.5; /* Updated line height */
   margin-bottom: 20px;
@@ -710,7 +680,7 @@ h3{
     padding: 20px;
   }
 }
-/* clients */
+/* Clients */
 /* Our Clients Section */
 .our-clients-section {
   padding: 50px 20px;
@@ -739,7 +709,7 @@ h3{
 /* Client Logo */
 .client img {
   width: 100%;
-  height: 100px;
+  height: 130px; /* Increased height */
   object-fit: contain;
   transition: transform 0.3s ease;
 }
@@ -752,6 +722,10 @@ h3{
 @media (max-width: 1024px) {
   .our-clients-container {
     grid-template-columns: repeat(3, 1fr); /* 3 logos per row */
+  }
+
+  .client img {
+    height: 120px; /* Increased height */
   }
 }
 
@@ -766,7 +740,7 @@ h3{
   }
 
   .client img {
-    height: 80px; /* Adjusted height */
+    height: 110px; /* Increased height */
   }
 }
 
@@ -781,9 +755,10 @@ h3{
   }
 
   .client img {
-    height: 60px;
+    height: 100px; /* Increased height */
   }
 }
+
 /* About Us page */
 .about-us-section1 {
   width: 100%;
@@ -791,11 +766,27 @@ h3{
   font-family: 'Montserrat', sans-serif;
 }
 
+.about-us-details1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-image: url('/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.6); /* Adjust the opacity (0.5 = 50% transparent) */
+  background-blend-mode: overlay; /* Blends the background color with the image */
+}
+
 /* Banner Image Section */
 .about-us-banner1 {
   position: relative;
-  height: 300px;
-  background-image: url('/aboutusbanner.jpg');
+  height: 300px; /* Adjust as needed */
+
+  /* background-image: url('/aboutusbanner.jpg'); */
+  background: linear-gradient(to right, #000428, #004e92);
+
   background-size: cover;
   background-position: center;
   display: flex;
@@ -807,7 +798,9 @@ h3{
   color: white;
   font-size: 3rem;
   font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-top: 140px;
+
 }
 
 /* About Us Details Section */
@@ -837,7 +830,7 @@ h3{
 
 .about-us-img1 {
   width: 100%;
-  height: 400px;
+  height: 500px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -846,14 +839,15 @@ h3{
   flex: 1;
   padding: 0 20px;
   font-size: 1.1rem; /* Reduced font size */
-  color: #333;
+  color: #2e2d79;
 }
 
 .about-us-text1 p {
   margin-bottom: 15px;
   line-height: 1.6;
-  color: #555;
-  font-size: 0.95rem; /* Decreased paragraph text size */
+  color: #2e2d79;
+  font-size: 18px; /* Decreased paragraph text size */
+  font-weight: 500;
 }
 
 /* Meet the Founder Section */
@@ -930,6 +924,7 @@ h3{
 .mission-vision-section {
   padding: 50px 5%; /* Increased padding for wider section */
   /* background-color: #fff; */
+  
   text-align: center;
 }
 
@@ -948,11 +943,13 @@ h3{
   flex-wrap: wrap; /* Ensures responsiveness */
   max-width: 100%; /* Increased container width */
   margin: 0 auto; /* Centers the container */
+  
 }
 
 .mission-card,
 .vision-card {
-  background-color: #eeeeee;
+  background: linear-gradient(to right, #000428, #004e92);
+
   padding: 30px; /* Increased padding */
   border-radius: 10px;
   width: 320px; /* Increased width for better spacing */
@@ -965,13 +962,13 @@ h3{
 .card-title {
   font-size: 1.4rem; /* Slightly increased */
   font-weight: bold;
-  color: #2e2d79;
+  color:white;
   margin-bottom: 15px;
 }
 
 .card-description {
   font-size: 1rem; /* Adjusted for better readability */
-  color: #787c8b;
+  color: white;
   font-family: 'Montserrat', sans-serif;
   line-height: 1.5;
   word-wrap: break-word;
@@ -1003,32 +1000,25 @@ h3{
 /* Banner Section with Overlay */
 .service-banner {
   position: relative;
-  background: url("/heroimg1.jpg") center/cover no-repeat;
+  /* background: url("/heroimg1.jpg") center/cover no-repeat; */
+  background: linear-gradient(to right, #000428, #004e92);
+
   color: white;
   padding: 70px 20px; /* Adjusted padding */
   text-align: center;
-  height: 20vh;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 
-/* Overlay */
-.service-banner::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
-}
 
 /* Ensure text appears above the overlay */
 .service-banner h1 {
   position: relative;
   font-size: 2rem;
+  margin-top: 100px;
   z-index: 2; /* Keeps text above the overlay */
 }
 
@@ -1097,6 +1087,7 @@ h3{
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   width: 280px; /* Ensuring uniform width */
+  margin-bottom: 20px;
 }
 
 .service-img {
@@ -1122,7 +1113,8 @@ h3{
 
 /* Read More Button */
 .read-more-btn { 
-  background-color: #ff9800;
+  background: linear-gradient(to right, #000428, #004e92);
+
   color: white;
   border: none;
   padding: 8px 14px;
@@ -1186,9 +1178,11 @@ h3{
 /* Banner Section */
 .equipment-banner {
   position: relative; /* Ensures overlay stays inside */
-  background: url("/equipmentrentalbannernew.jpg") center/cover no-repeat;
+  /* background: url("/equipmentrentalbannernew.jpg") center/cover no-repeat; */
+  background: linear-gradient(to right, #000428, #004e92);
+
   width: 100%;
-  height: 400px; /* Adjust height as needed */
+  height: 200px; /* Adjust height as needed */
   color: white;
   display: flex;
   justify-content: center;
@@ -1197,21 +1191,6 @@ h3{
   overflow: hidden; /* Prevents any unwanted overflow */
 }
 
-.equipment-banner::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%; /* Ensures it covers the full banner */
-  height: 400px; /* Ensures it covers the full banner */
-  background: rgba(0, 0, 0, 0.4); /* Black overlay with 50% opacity */
-  z-index: 1; /* Places the overlay above the background */
-}
-
-.banner h1 {
-  position: relative; /* Ensures text appears above overlay */
-  z-index: 2;
-}
 
 .equipment-banner-heading {
   font-size: 2rem; /* Decreased size */
@@ -1219,6 +1198,8 @@ h3{
   font-family: 'Montserrat', sans-serif;
   color: white;
   z-index: 2;
+  margin-top: 100px;
+
 
 }
 
@@ -1270,7 +1251,8 @@ h3{
 
 /* View Models Button */
 .view-models-button {
-  background-color: #ff9800;
+  background: linear-gradient(to right, #000428, #004e92);
+
   color: white;
   padding: 5px 10px;
   border: none;
@@ -1310,9 +1292,12 @@ h3{
 }
 .transport-banner {
   position: relative;
-  background: url("/trsportbannernew.jpg") center/cover no-repeat;
+  /* background: url("/trsportbannernew.jpg") center/cover no-repeat; */
+  background: linear-gradient(to right, #000428, #004e92);
+  height: 200px; /* Adjust as needed */
+
   width: 100%;
-  height: 400px; /* Adjust height as needed */
+  /* height: 400px; Adjust height as needed */
   color: white;
   display: flex;
   justify-content: center;
@@ -1320,15 +1305,6 @@ h3{
   text-align: center;
 }
 
-.transport-banner::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
-}
 
 
 .banner-heading {
@@ -1337,6 +1313,8 @@ h3{
   font-family: 'Montserrat', sans-serif;
   color: white;
   z-index: 2;
+  margin-top: 100px;
+
 }
 
 /* Transportation Grid Layout */
@@ -1417,26 +1395,25 @@ h3{
     grid-template-columns: repeat(1, 1fr);
   }
 }
-/* Material Supply Page */
-.material-supply {
-  text-align: center;
-  padding: 20px;
-  font-family: "Montserrat", sans-serif;
-  background-color: white;
-}
-
-/* Banner */
 .banner {
-  background: url("/aboutusbanner.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: center;
+  background: linear-gradient(to right, #000428, #004e92);
   color: white;
   padding: 50px 0;
+  height: 200px; /* Adjust as needed */
 }
 
 .banner-heading {
   font-size: 2.5rem;
   font-weight: bold;
-  color:white;
+  color: white;
+  text-align: center;
+  margin-top: 100px;
 }
+
 
 /* Intro Section (Image Left, Content Right) */
 .material-intro {
@@ -1578,16 +1555,18 @@ h3{
 /* Machinery Supply Page */
 .machinery-supply {
   text-align: center;
-  padding: 20px;
+  /* padding: 20px; */
   font-family: "Montserrat", sans-serif;
   background-color: white;
 }
 
 /* Banner */
 .machinery-banner {
-  background: url("/aboutusbanner.jpg") center/cover no-repeat;
+  /* background: url("/aboutusbanner.jpg") center/cover no-repeat; */
   color: white;
-  padding: 50px 0;
+  background: linear-gradient(to right, #000428, #004e92);
+
+  /* padding: 50px 0; */
 }
 
 .machinery-banner-heading {
@@ -1745,7 +1724,9 @@ h3{
 .contact-banner {
   width: 100%;
   height: 250px; /* Adjust height as needed */
-  background-image: url('/aboutusbanner.jpg'); /* Replace with your image URL */
+  /* background-image: url('/aboutusbanner.jpg'); Replace with your image URL */
+  background: linear-gradient(to right, #000428, #004e92);
+
   background-size: cover;
   background-position: center;
   display: flex;
@@ -1758,15 +1739,6 @@ h3{
   position: relative;
 }
 
-.contact-banner::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
-}
 
 .contact-banner h1 {
   position: relative;
@@ -1852,7 +1824,8 @@ h3{
 /* Submit Button */
 .submit-btn {
   width: 100%;
-  background-color: #2e2d79;
+  background: linear-gradient(to right, #000428, #004e92);
+
   color: white;
   padding: 14px;
   border: none;
@@ -1983,37 +1956,23 @@ h3{
   text-align: center;
 }
 
-/* Banner Section */
 .instrumentation-banner {
-  position: relative;
-  width: 100%;
-  height: 300px; /* Adjust the height as needed */
-  overflow: hidden;
-}
-
-.banner-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.banner-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: center;
+  background: linear-gradient(to right, #000428, #004e92); /* Keep background gradient if needed */
+  color: white;
+  padding: 50px 0;
+  height: 200px; /* Adjust height as needed */
 }
 
 .banner-overlay h1 {
-  color: white;
   font-size: 2.5rem;
-  text-align: center;
+  font-weight: bold;
+  margin-top: 100px;
 }
+
 
 /* Section Styling */
 .instrumentation-section,
@@ -2256,7 +2215,8 @@ h3{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #25d366;
+  background: linear-gradient(to right, #25D366, #128C7E);
+
   color: white;
   padding: 12px 18px;
   border-radius: 5px;
@@ -2380,9 +2340,9 @@ h3{
 }
 
 .footer-logo img {
-  width: 220px; /* Adjusted logo size */
+  width: 280px; /* Increased size for large screens */
   height: auto;
-  margin-left: 30px; /* Reduced margin for better alignment */
+  margin-left: 30px; /* Keep alignment */
 }
 
 .footer-links ul {
@@ -2393,7 +2353,7 @@ h3{
 
 .footer-links h4,
 .footer-contact h4 {
-  color: #f8f9fa; /* Lightened text for better contrast */
+  color: white; /* Lightened text for better contrast */
   margin-bottom: 10px;
 }
 
@@ -2403,7 +2363,7 @@ h3{
 
 .footer-links a {
   text-decoration: none;
-  color: #b0b3d6; /* Lighter color for readability */
+  color: white; /* Lighter color for readability */
   transition: color 0.3s;
 }
 
@@ -2417,7 +2377,7 @@ h3{
 }
 
 .footer-socials a {
-  color: #b0b3d6;
+  color: white;
   font-size: 22px;
   margin: 0 8px; /* Adjusted spacing */
   transition: color 0.3s;
@@ -2432,7 +2392,6 @@ h3{
   font-size: 13px; /* Slightly smaller text */
   color: #b0b3d6;
 }
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .footer {
@@ -2448,8 +2407,8 @@ h3{
   }
 
   .footer-logo img {
-    width: 150px; /* Adjust logo size on smaller screens */
-    margin-left: 0;
+    width: 180px; /* Increase logo size */
+    border-radius: 10px; /* Add rounded corners */
   }
 
   .footer-socials {
@@ -2478,7 +2437,8 @@ h3{
   }
 
   .footer-logo img {
-    width: 130px; /* Smaller logo for very small screens */
+    width: 200px; /* Further increase logo size */
+    border-radius: 15px; /* More rounded corners */
   }
 
   .footer-socials {
@@ -2493,6 +2453,7 @@ h3{
     font-size: 11px; /* Adjust footer text for small screens */
   }
 }
+
 .go-back-button {
   margin-bottom: 20px;
   padding: 10px 15px;

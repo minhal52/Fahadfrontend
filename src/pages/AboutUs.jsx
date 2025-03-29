@@ -12,11 +12,11 @@ const AboutUs = () => {
     "/kbrlogo.jpg",
     "/l_tlogo-removebg-preview - Copy (2).png",
     "/mcclogo-removebg-preview - Copy (2).png",
-    "/nesmalogo-removebg-preview - Copy (2).png",
+    "/2-removebg-preview (1).png",
     "/sabiclogo-removebg-preview - Copy (2).png",
     "/samsunglogo-removebg-preview - Copy (2).png",
-    "/Saudiaramco_logo-removebg-preview - Copy (2).png",
-    "/saudielectricitylogo-removebg-preview.png",
+    "/3-removebg-preview (1).png",
+    "/1-removebg-preview (1).png",
     "/sinopeclogo-removebg-preview.png",
     "/tecnimontlogo-removebg-preview.png",
     "/yokogamalogo-removebg-preview.png",
@@ -33,7 +33,7 @@ const AboutUs = () => {
         <h2 className="about-us-heading1">Who We Are</h2>
         <div className="about-us-content1">
           <div className="about-us-image1">
-            <img src="/Fahad_EngineeringLogo-.png" alt="About Us" className="about-us-img1" />
+            <img src="/aboutus.jpg" alt="About Us" className="about-us-img1" />
           </div>
           <div className="about-us-text1">
           <p>Fahad Engineering is a Saudi-owned company operating from Jubail city, established in 2006, under Commercial Registration No: 2057007979.

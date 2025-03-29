@@ -5,7 +5,7 @@ const InstrumentationPage = () => {
     <div className="instrumentation-page">
       {/* Banner Section */}
       <section className="instrumentation-banner">
-        <img src="/instrumnttnbnnr.jpg" alt="Instrumentation Banner" className="banner-img" />
+        {/* <img src="/instrumnttnbnnr.jpg" alt="Instrumentation Banner" className="banner-img" /> */}
         <div className="banner-overlay">
           <h1>Instrumentation & Control Systems</h1>
         </div>

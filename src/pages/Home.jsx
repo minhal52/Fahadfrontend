@@ -141,7 +141,7 @@ const AboutSection = () => {
     <section className="about-section">
       <div className="about-container">
         <div className="about-image">
-          <img src="/Fahad_EngineeringLogo-.png" alt="About Us" />
+          <img src="/aboutus.jpg" alt="About Us" />
         </div>
         <div className="about-content">
           <h2>About Us</h2>
@@ -200,11 +200,11 @@ const OurClients = () => {
     "/kbrlogo.jpg",
     "/l_tlogo-removebg-preview - Copy (2).png",
     "/mcclogo-removebg-preview - Copy (2).png",
-    "/nesmalogo-removebg-preview - Copy (2).png",
+    "/2-removebg-preview (1).png",
     "/sabiclogo-removebg-preview - Copy (2).png",
     "/samsunglogo-removebg-preview - Copy (2).png",
-"/Saudiaramco_logo-removebg-preview - Copy (2).png",
-    "/saudielectricitylogo-removebg-preview.png",
+    "/3-removebg-preview (1).png",
+    "/1-removebg-preview (1).png",
     "/sinopeclogo-removebg-preview.png",
     "/tecnimontlogo-removebg-preview.png",
     "/yokogamalogo-removebg-preview.png",

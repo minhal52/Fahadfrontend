@@ -595,7 +595,7 @@ h3{
 }
 /* about section */
 .about-section {
-  padding: 50px 20px;
+  /* padding: 50px 20px; */
   background-color: #f9f9f9; /* Optional background color */
  
 }
@@ -619,7 +619,7 @@ h3{
   height: 100%;
   object-fit: cover;
   
-  max-width: 400px; /* Adjust the width to your preference */
+  max-width: 500px; /* Adjust the width to your preference */
   aspect-ratio: 1.5; /* Makes the image a rectangle */
   border-radius: 8px; /* Optional: for rounded corners */
 }
@@ -668,6 +668,8 @@ h3{
   .about-container {
     flex-direction: column;
     text-align: center;
+  padding: 50px 20px;
+
   }
 
   .about-image img {

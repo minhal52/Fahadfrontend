@@ -407,6 +407,7 @@ h3{
 .service-name {
   font-size: 16px;
   color: #333; /* Dark text color */
+  
   font-weight: bold;
   margin-top: 10px; /* Adds some space between the name and the image */
 }
@@ -1002,18 +1003,28 @@ h3{
 /* Banner Section with Overlay */
 .service-banner {
   position: relative;
-  /* background: url("/heroimg1.jpg") center/cover no-repeat; */
-  background: linear-gradient(to right, #000428, #004e92);
-
+  background: url("/heroimg1.jpg") center/cover no-repeat;
   color: white;
-  padding: 70px 20px; /* Adjusted padding */
+  padding: 70px 20px;
   text-align: center;
-  height: 100px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
+
+.service-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  z-index: 1;
+}
+
 
 
 /* Ensure text appears above the overlay */

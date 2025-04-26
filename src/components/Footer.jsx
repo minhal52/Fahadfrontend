@@ -51,6 +51,7 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="footer-bottom">
         <p>&copy; 2025 Fahad Engineering. All Rights Reserved.</p>
+        <p>Designed by Ebota</p>
       </div>
     </footer>
   );

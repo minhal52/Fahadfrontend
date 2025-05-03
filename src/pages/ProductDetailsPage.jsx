@@ -40,10 +40,7 @@ const ProductDetailsPage = () => {
 
   return (
     <div className="product-details">
-      {/* Go Back Button */}
-      <button className="go-back-button" onClick={() => navigate(-1)}>
-        Go Back
-      </button>
+      
 
       {/* Left Side - Product Images */}
       <div className="product-images">
@@ -79,9 +76,15 @@ const ProductDetailsPage = () => {
         <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="whatsapp-button">
           <FaWhatsapp className="whatsapp-icon" /> WhatsApp Inquiry
         </a>
+    
+  {/* Go Back Button */}
+  <div className="go-back-wrapper">
+  <button className="go-back-button" onClick={() => navigate(-1)}>
+    Go Back
+  </button>
+</div>
 
-  
-      </div>
+</div>
     </div>
   );
 };

@@ -2461,7 +2461,7 @@ h3{
     font-size: 11px; /* Adjust footer text for small screens */
   }
 }
-
+/* 
 .go-back-button {
   margin-bottom: 20px;
   padding: 10px 15px;
@@ -2473,6 +2473,41 @@ h3{
 
 .go-back-button:hover {
   background-color: #ddd;
+} */
+/* Default (mobile-first): place it normally */
+.go-back-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Button styles */
+.go-back-button {
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.go-back-button:hover {
+  background-color: #ddd;
+}
+
+/* ✅ Large screen behavior */
+@media screen and (min-width: 1024px) {
+  .product-details {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+  }
+
+  .go-back-wrapper {
+    flex-basis: 100%;
+    text-align: center;
+    order: 3; /* Push to bottom if using flex */
+    margin-top: 40px;
+  }
 }
 
 .thumbnail {

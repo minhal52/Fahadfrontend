@@ -5,27 +5,28 @@ const servicesData = [
     id: 1,
     image: "/jcb.jpg",
     name: "Equipment Rentals",
-    route: "/equipment-rental",
+    route: "/services/equipment-rental",  // Updated here
   },
   {
     id: 2,
     image: "/ashokleylandbus1.jpg",
     name: "Transportation",
-    route: "/transportation",
+    route: "/services/transportation",  // Updated here
   },
   {
     id: 3,
     image: "/materialsupply.jpg",
     name: "Material Supply",
-    route: "/material-supply",
+    route: "/services/material-supply",  // Updated here
   },
   {
     id: 4,
     image: "/machinariesimg.jpg",
     name: "Machineries",
-    route: "/machineries",
+    route: "/services/machinery-supply",  // Updated here
   },
 ];
+
 
 const ServicePage = () => {
   const navigate = useNavigate();

@@ -18,7 +18,7 @@ const Home = () => {
           animate={{ opacity: 1, y: 0 }} 
           transition={{ duration: 0.8 }}
         >
-          "Engineering Solutions, Empowering Success!"
+          "Engineering Solutions, Empowering Success"
         </motion.h1>
 
         <motion.p 
